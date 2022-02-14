@@ -36,13 +36,13 @@ class SignIn extends Component {
 
     render() {
         return (
-            <div className="sign-in">
+            <div className='sign-in'>
                 <h2>I already have an account</h2>
                 <span>Sign in With Your Email and Password</span>
                 <form onSubmit={this.handleSubmit}>
                     <FormInput
-                        type="email"
-                        name="email"
+                        type='email'
+                        name='email'
                         value={this.state.email}
                         required 
                         handleChange={this.handleChange}
@@ -50,15 +50,15 @@ class SignIn extends Component {
                     />
                    
                     <FormInput
-                        type="password"
-                        name="password"
+                        type='password'
+                        name='password'
                         value={this.state.password}
                         required 
                         handleChange={this.handleChange}
-                        label="Password"
+                        label='Password'
                     />
-                    <div className="buttons">
-                        <CustomButton type="submit">Sign in</CustomButton>
+                    <div className='buttons'>
+                        <CustomButton type='submit'>Sign in</CustomButton>
                         <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
                             Sign In With Google
                         </CustomButton>
