@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions'
 
 
+
 class App extends Component{
  
   unsubscribeFromAuth = null;
@@ -48,7 +49,7 @@ class App extends Component{
           <Route exact path='/signin'
             render={() =>
               this.props.currentUser ? (
-                <Redirect to='/' />
+                <Redirect to='/' /> 
               ) :
                 (
                   <SignInAndSignUp />
