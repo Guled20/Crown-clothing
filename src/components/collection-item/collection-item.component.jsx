@@ -5,9 +5,9 @@ import './colleciton-item.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 
 const CollectionItem = ({ item, addItem }) => {
-    const {  name, price, imageUrl } = item;
+    const { name, price, imageUrl } = item;
     return (
-    
+
         <div className='collection-item'>
             <div className='image'
                 style={{
@@ -26,4 +26,4 @@ const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item))
 });
 
-export default connect(null,mapDispatchToProps)(CollectionItem);
+export default connect(null, mapDispatchToProps)(CollectionItem);

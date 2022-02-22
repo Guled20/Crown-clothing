@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-import { signInWithGoogle,auth } from '../../firebase/firebase.utils';
+import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
 import './sign-in.styles.scss';
 
 class SignIn extends Component {
@@ -11,7 +11,7 @@ class SignIn extends Component {
 
         this.state = {
             email: '',
-            password:''
+            password: ''
         }
     }
 
@@ -26,9 +26,9 @@ class SignIn extends Component {
         } catch (error) {
             console.error(error);
         }
-       
+
     }
-    
+
     handleChange = event => {
         const { value, name } = event.target;
         this.setState({ [name]: value });
@@ -44,16 +44,16 @@ class SignIn extends Component {
                         type='email'
                         name='email'
                         value={this.state.email}
-                        required 
+                        required
                         handleChange={this.handleChange}
                         label='Email'
                     />
-                   
+
                     <FormInput
                         type='password'
                         name='password'
                         value={this.state.password}
-                        required 
+                        required
                         handleChange={this.handleChange}
                         label='Password'
                     />

@@ -33,7 +33,7 @@ class SignUp extends Component {
                 displayName: '',
                 email: '',
                 password: '',
-                confirmPassword:''
+                confirmPassword: ''
             })
 
         } catch (error) {
@@ -51,7 +51,7 @@ class SignUp extends Component {
             <div className='sign-up'>
                 <h2 className='title'>I do not have a account</h2>
                 <span>Sign Up with Your Email and Password</span>
-                
+
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
                         type='text'
@@ -61,7 +61,7 @@ class SignUp extends Component {
                         label='Display Name'
                         required
                     />
-                     <FormInput
+                    <FormInput
                         type='email'
                         name='email'
                         value={email}
@@ -69,7 +69,7 @@ class SignUp extends Component {
                         label='Email'
                         required
                     />
-                     <FormInput
+                    <FormInput
                         type='password'
                         name='password'
                         value={password}
@@ -77,7 +77,7 @@ class SignUp extends Component {
                         label='Password'
                         required
                     />
-                     <FormInput
+                    <FormInput
                         type='password'
                         name='confirmPassword'
                         value={confirmPassword}
