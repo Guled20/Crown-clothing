@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item.component";
 
 import { selectCollection } from "../../redux/shop/shop.selectors";
-
+import { firestore } from "../../firebase/firebase.utils";
 import {
   CollectionPageContainer,
   CollectionTitle,
   CollectionItemsContainer,
 } from "./collection.styles";
 
-const CollectionPage = ({ collection }) => {
-  const { title, items } = collection;
+const CollectionPage = ({ collection: { title, items } }) => {
   return (
     <CollectionPageContainer>
       <CollectionTitle>{title}</CollectionTitle>
